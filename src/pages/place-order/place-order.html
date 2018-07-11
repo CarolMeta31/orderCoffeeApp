@@ -1,0 +1,57 @@
+<!--
+  Generated template for the PlaceOrderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>placeOrder</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="overall" padding>
+  <h1>{{username}} please place order!!</h1>
+  
+    <ion-list >
+
+
+        <ion-item >
+          
+          <ion-label>whip cream</ion-label>
+          <ion-checkbox [(ngModel)]="whipcream"></ion-checkbox>
+        </ion-item>
+    
+      
+        <ion-item>
+          <ion-label>chocolate</ion-label>
+          <ion-checkbox [(ngModel)]="chocolate"></ion-checkbox>
+        </ion-item>
+      
+      
+        <ion-item>
+          <ion-label>foam</ion-label>
+          <ion-checkbox [(ngModel)]="foam"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+<ion-item>
+  <h2 text-center>quantity</h2>
+<h2 text-center>{{countNumber}}</h2>
+</ion-item>
+<button ion-button round  color="coffee"  (click)="countQuantity(+1)">add quantity</button>
+  <button ion-button round color="coffee"  (click)="reset(0)">reset</button>
+
+  <button ion-button full  color="coffee" (click)="placeOrder()">place Order</button>
+
+    
+  <ion-item class="display">
+<p>quantity :{{countNumber}}</p>
+<p>order options: </p>
+<p>total:{{total}}</p>
+      </ion-item>
+      
+  
+</ion-content>
